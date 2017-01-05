@@ -13,6 +13,18 @@ Seaborn is a Python visualization library based on matplotlib. It
 provides a high-level interface for drawing attractive statistical graphics.
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/seaborn-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/seaborn-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/seaborn-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/seaborn-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/seaborn-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/seaborn-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/seaborn/badges/version.svg)](https://anaconda.org/conda-forge/seaborn)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/seaborn/badges/downloads.svg)](https://anaconda.org/conda-forge/seaborn)
+
 Installing seaborn
 ==================
 
@@ -33,7 +45,6 @@ It is possible to list all of the versions of `seaborn` available on your platfo
 ```
 conda search seaborn --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -69,18 +80,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/seaborn-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/seaborn-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/seaborn-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/seaborn-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/seaborn-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/seaborn-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/seaborn/badges/version.svg)](https://anaconda.org/conda-forge/seaborn)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/seaborn/badges/downloads.svg)](https://anaconda.org/conda-forge/seaborn)
 
 
 Updating seaborn-feedstock
