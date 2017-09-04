@@ -1,6 +1,6 @@
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 {% set name = "seaborn" %}
-{% set sha256 = "732d08306449e3f041ed9f0c3cfadaf5480c8d352c2321b58f71e26607e34dfc" %}
+{% set sha256 = "6702978b903d0284446e935916b980dfebae4063c18ad8eb6e8f9e76d0257eae" %}
 
 package:
   name: {{ name }}
@@ -8,9 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-#  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-#  hack required because of version mismatch at pypi: 0.8.0 -> 0.8
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version[:3] }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
