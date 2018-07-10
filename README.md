@@ -16,14 +16,15 @@ provides a high-level interface for drawing attractive statistical graphics.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/seaborn-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/seaborn-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/seaborn-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/seaborn-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/seaborn-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/seaborn-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/seaborn-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/seaborn-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/seaborn/badges/version.svg)](https://anaconda.org/conda-forge/seaborn)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/seaborn/badges/downloads.svg)](https://anaconda.org/conda-forge/seaborn)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-seaborn-green.svg)](https://anaconda.org/conda-forge/seaborn) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/seaborn.svg)](https://anaconda.org/conda-forge/seaborn) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/seaborn.svg)](https://anaconda.org/conda-forge/seaborn) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/seaborn.svg)](https://anaconda.org/conda-forge/seaborn) |
 
 Installing seaborn
 ==================
@@ -68,6 +69,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
