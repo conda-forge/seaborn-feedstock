@@ -1,6 +1,6 @@
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 {% set name = "seaborn" %}
-{% set sha256 = "6702978b903d0284446e935916b980dfebae4063c18ad8eb6e8f9e76d0257eae" %}
+{% set sha256 = "76c83f794ca320fb6b23a7c6192d5e185a5fcf4758966a0c0a54baee46d41e2f" %}
 
 package:
   name: {{ name }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
