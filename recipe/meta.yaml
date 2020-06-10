@@ -12,10 +12,6 @@ build:
   number: 1
   noarch: python
 
-requirements:	
-  host:	
-    - python >=3.6	
-
 test:
   imports:
     - seaborn
@@ -26,7 +22,8 @@ test:
 
 outputs:
   - name: seaborn-base
-    script: {{ PYTHON }} -m pip install . --no-deps -vv
+    script: build_base.bat  # [win]
+    script: build_base.sh  # [not win]
     requirements:
       host:
         - python >=3.6
