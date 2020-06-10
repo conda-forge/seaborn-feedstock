@@ -1,7 +1,7 @@
 {% set version = "0.10.1" %}
 
 package:
-  name: seaborn
+  name: seaborn-base
   version: {{ version }}
 
 source:
@@ -9,21 +9,8 @@ source:
   sha256: 2d1a0c9d6bd1bc3cadb0364b8f06540f51322a670cf8438d0fde1c1c7317adc0
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-
-requirements:
-  host:
-    - python >=3.6
-    - pip
-  run:
-    - python >=3.6
-    - numpy >=1.13.3
-    - matplotlib-base >=2.1.2
-    - scipy >=1.0.1
-    - pandas >=0.22.0
-    - statsmodels >=0.8.0
 
 test:
   imports:
@@ -32,6 +19,30 @@ test:
     - pip
   commands:
     - pip check
+
+outputs:
+  - name: seaborn-base
+    script: {{ PYTHON }} -m pip install . --no-deps -vv
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+        - numpy >=1.13.3
+        - matplotlib-base >=2.1.2
+        - scipy >=1.0.1
+        - pandas >=0.22.0
+      test:
+        imports:
+          - seaborn
+  
+  - name: seaborn
+    build:
+    requirements:
+      run:
+        - statsmodels >=0.8.0
+        - {{ pin_subpackage('seaborn-base', max_pin="x.x.x.x") }}
 
 about:
   home: https://seaborn.pydata.org
