@@ -1,4 +1,4 @@
-{% set version = "0.10.1" %}
+{% set version = "0.11.0" %}
 
 package:
   name: seaborn-base
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/seaborn/seaborn-{{ version }}.tar.gz
-  sha256: 2d1a0c9d6bd1bc3cadb0364b8f06540f51322a670cf8438d0fde1c1c7317adc0
+  sha256: 390f8437b14f5ce845062f2865ad51656464c306d09bb97d7764c6cba1dd607c
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 test:
@@ -30,14 +30,14 @@ outputs:
         - pip
       run:
         - python >=3.6
-        - numpy >=1.13.3
-        - matplotlib-base >=2.1.2
+        - numpy >=1.15
+        - matplotlib-base >=2.2
         - scipy >=1.0.1
-        - pandas >=0.22.0
+        - pandas >=0.23
       test:
         imports:
           - seaborn
-  
+
   - name: seaborn
     build:
     requirements:
