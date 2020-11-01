@@ -5,9 +5,13 @@ Home: https://seaborn.pydata.org
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/seaborn-feedstock/blob/master/LICENSE.txt)
 
 Summary: Statistical data visualization
+
+Development: https://github.com/mwaskom/seaborn
+
+Documentation: https://seaborn.pydata.org
 
 Seaborn is a Python visualization library based on matplotlib. It
 provides a high-level interface for drawing attractive statistical graphics.
