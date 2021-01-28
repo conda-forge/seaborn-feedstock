@@ -1,7 +1,7 @@
 {% set version = "0.11.1" %}
 
 package:
-  name: seaborn-base
+  name: seaborn-split
   version: {{ version }}
 
 source:
@@ -9,7 +9,7 @@ source:
   sha256: 44e78eaed937c5a87fc7a892c329a7cc091060b67ebd1d0d306b446a74ba01ad
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 test:
@@ -22,6 +22,8 @@ test:
 
 outputs:
   - name: seaborn-base
+    build:
+      noarch: python
     script: build_base.bat  # [win]
     script: build_base.sh  # [not win]
     requirements:
@@ -40,6 +42,7 @@ outputs:
 
   - name: seaborn
     build:
+      noarch: python
     requirements:
       run:
         - statsmodels >=0.8.0
@@ -58,6 +61,7 @@ about:
   dev_url: https://github.com/mwaskom/seaborn
 
 extra:
+  feedstock-name: seaborn
   recipe-maintainers:
     - msarahan
     - r-jain1
