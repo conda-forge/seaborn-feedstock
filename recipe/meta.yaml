@@ -22,6 +22,8 @@ test:
 
 outputs:
   - name: seaborn-base
+    build:
+      noarch: python
     script: build_base.bat  # [win]
     script: build_base.sh  # [not win]
     requirements:
@@ -40,6 +42,7 @@ outputs:
 
   - name: seaborn
     build:
+      noarch: python
     requirements:
       run:
         - statsmodels >=0.8.0
