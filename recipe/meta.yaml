@@ -1,7 +1,7 @@
 {% set version = "0.11.1" %}
 
 package:
-  name: seaborn-base
+  name: seaborn-split
   version: {{ version }}
 
 source:
@@ -61,6 +61,7 @@ about:
   dev_url: https://github.com/mwaskom/seaborn
 
 extra:
+  feedstock-name: seaborn
   recipe-maintainers:
     - msarahan
     - r-jain1
