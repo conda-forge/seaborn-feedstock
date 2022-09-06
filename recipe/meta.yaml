@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/seaborn/seaborn-{{ version }}.tar.gz
-  sha256: 3412f9aedcc3256efeb49bff24db7f0a28c7b1247bb2da4669d728c5f82bd2f9
+  sha256: 893f17292d8baca616c1578ddb58eb25c72d622f54fc5ee329c8207dc9b57b23
 
 build:
   number: 0
