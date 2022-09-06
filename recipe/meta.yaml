@@ -1,4 +1,4 @@
-{% set version = "0.11.2" %}
+{% set version = "0.12.0" %}
 
 package:
   name: seaborn-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/seaborn/seaborn-{{ version }}.tar.gz
-  sha256: cf45e9286d40826864be0e3c066f98536982baf701a7caa386511792d61ff4f6
+  sha256: 893f17292d8baca616c1578ddb58eb25c72d622f54fc5ee329c8207dc9b57b23
 
 build:
   number: 0
