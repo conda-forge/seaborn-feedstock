@@ -1,4 +1,4 @@
-{% set version = "0.11.2" %}
+{% set version = "0.12.0" %}
 
 package:
   name: seaborn-split
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/seaborn/seaborn-{{ version }}.tar.gz
-  sha256: cf45e9286d40826864be0e3c066f98536982baf701a7caa386511792d61ff4f6
+  sha256: 3412f9aedcc3256efeb49bff24db7f0a28c7b1247bb2da4669d728c5f82bd2f9
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 test:
@@ -28,14 +28,14 @@ outputs:
     script: build_base.sh  # [not win]
     requirements:
       host:
-        - python >=3.6
+        - python >=3.7
         - pip
       run:
-        - python >=3.6
+        - python >=3.7
         - numpy >=1.15
-        - matplotlib-base >=2.2
-        - scipy >=1.0.1
-        - pandas >=0.23
+        - matplotlib-base >=3.1
+        - scipy >=1.3
+        - pandas >=0.25
       test:
         imports:
           - seaborn
@@ -45,7 +45,7 @@ outputs:
       noarch: python
     requirements:
       run:
-        - statsmodels >=0.8.0
+        - statsmodels >=0.10
         - {{ pin_subpackage('seaborn-base', max_pin="x.x.x.x") }}
 
 about:
