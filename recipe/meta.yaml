@@ -28,15 +28,14 @@ outputs:
     script: build_base.sh  # [not win]
     requirements:
       host:
-        - python >=3.7
+        - python >=3.8
         - pip
       run:
-        - python >=3.7
-        - numpy >=1.17,!=1.24.0
-        - matplotlib-base >=3.1,!=3.6.1
+        - python >=3.8
+        - numpy >=1.20,!=1.24.0
+        - matplotlib-base >=3.3,!=3.6.1
         - scipy >=1.3
-        - pandas >=0.25
-        - typing_extensions
+        - pandas >=1.2
       test:
         imports:
           - seaborn
@@ -46,7 +45,7 @@ outputs:
       noarch: python
     requirements:
       run:
-        - statsmodels >=0.10
+        - statsmodels >=0.12
         - {{ pin_subpackage('seaborn-base', max_pin="x.x.x.x") }}
 
 about:
