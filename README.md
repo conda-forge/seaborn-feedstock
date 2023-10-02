@@ -1,11 +1,11 @@
-About seaborn
-=============
+About seaborn-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/seaborn-feedstock/blob/main/LICENSE.txt)
 
 Home: https://seaborn.pydata.org
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/seaborn-feedstock/blob/main/LICENSE.txt)
 
 Summary: Statistical data visualization
 
