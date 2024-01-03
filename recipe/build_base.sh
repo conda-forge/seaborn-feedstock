@@ -1,1 +1,1 @@
-$PYTHON -m pip install . --no-deps -vv
+PIP_NO_INDEX=True PIP_NO_DEPENDENCIES=True PIP_NO_BUILD_ISOLATION=False PIP_IGNORE_INSTALLED=True PYTHONDONTWRITEBYTECODE=True $PYTHON -m pip install . --no-deps -vv
