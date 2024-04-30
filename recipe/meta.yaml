@@ -1,4 +1,5 @@
 {% set version = "0.13.2" %}
+{% set build = 2 %}
 
 package:
   name: seaborn-split
@@ -9,7 +10,7 @@ source:
   sha256: 93e60a40988f4d65e9f4885df477e2fdaff6b73a9ded434c1ab356dd57eefff7
 
 build:
-  number: 1
+  number: {{ build }}
   noarch: python
 
 test:
@@ -38,7 +39,9 @@ outputs:
         - scipy >=1.7
         - pandas >=1.2
       run_constrained:
-        - {{ pin_subpackage('seaborn', exact=True) }}        
+        # should be {{ pin_subpackage("seaborn", exact=True) }}
+        # but this seems to be broken right now: https://github.com/conda/conda-build/issues/4415
+        - seaborn ={{ version }}=*_{{ build }}
       test:
         imports:
           - seaborn
