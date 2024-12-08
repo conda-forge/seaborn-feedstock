@@ -1,12 +1,12 @@
 {% set version = "0.13.2" %}
-{% set build = 2 %}
+{% set build = 3 %}
 
 package:
   name: seaborn-split
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/seaborn/seaborn-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/seaborn/seaborn-{{ version }}.tar.gz
   sha256: 93e60a40988f4d65e9f4885df477e2fdaff6b73a9ded434c1ab356dd57eefff7
 
 build:
@@ -18,6 +18,7 @@ test:
     - seaborn
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
@@ -29,11 +30,11 @@ outputs:
     script: build_base.sh  # [not win]
     requirements:
       host:
-        - python >=3.8
+        - python {{ python_min }}
         - pip
         - flit-core >=3.2,<4
       run:
-        - python >=3.8
+        - python >={{ python_min }}
         - numpy >=1.20,!=1.24.0
         - matplotlib-base >=3.4,!=3.6.1
         - scipy >=1.7
@@ -43,6 +44,8 @@ outputs:
         # but this seems to be broken right now: https://github.com/conda/conda-build/issues/4415
         - seaborn ={{ version }}=*_{{ build }}
       test:
+        requires:
+          - python {{ python_min }}
         imports:
           - seaborn
 
